@@ -6,16 +6,25 @@ spring:
       ddl-auto: validate
   kafka:
     bootstrap-servers: kafka:9092
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery-service:8761/eureka
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+app:
+  jwt:
+    issuer: spring-app-social-network
+    subject: user-details
+    access-secret: best_secret
+    refresh-secret: best_secret
+    access-duration: 300
+    refresh-duration: 2592000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka
     instance:
       preferIpAddress: true
