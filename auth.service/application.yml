@@ -10,3 +10,10 @@ spring:
   kafka:
     consumer:
       group-id: auth.service
+
+app:
+  jwt:
+    refresh-secret: best_secret
+    refresh-duration: 2592000
+  kafka:
+    creator-id: auth-service
