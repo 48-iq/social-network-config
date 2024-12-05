@@ -18,9 +18,7 @@ app:
     issuer: spring-app-social-network
     subject: user-details
     access-secret: best_secret
-    refresh-secret: best_secret
     access-duration: 300
-    refresh-duration: 2592000
 
 eureka:
   client:
