@@ -20,7 +20,7 @@ spring:
               - Path=/api/auth/**
           - id: uuid_route
             uri: lb://uuid:service
-            prodicates:
+            predicates:
               - Path=/api/uuid/**
       discovery:
         locator:
