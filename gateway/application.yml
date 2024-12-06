@@ -18,6 +18,10 @@ spring:
             uri: lb://auth.service
             predicates:
               - Path=/api/auth/**
+          - id: uuid_route
+            uri: lb://uuid:service
+            prodicates:
+              - Path=/api/uuid/**
       discovery:
         locator:
           enabled: 'true'
