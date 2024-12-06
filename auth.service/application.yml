@@ -12,6 +12,8 @@ spring:
       group-id: auth.service
 
 app:
+  security:
+    admin-password: best_admin_password
   jwt:
     refresh-secret: best_secret
     refresh-duration: 2592000
