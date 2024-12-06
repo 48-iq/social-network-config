@@ -19,7 +19,7 @@ spring:
             predicates:
               - Path=/api/auth/**
           - id: uuid_route
-            uri: lb://uuid:service
+            uri: lb://uuid.service
             predicates:
               - Path=/api/uuid/**
       discovery:
